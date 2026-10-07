@@ -14,14 +14,19 @@
     <?php
     if (isset($_POST['chaine'])) {
         $ch = $_POST['chaine'];
-        $mots = explode(" ", $ch);
-        $i = "";
-
-        foreach ($mots as $m) {
-            if ($m != "") {
-                $i .= strtoupper($m[0]);
-            }
+        $p=strpos($ch, " ");
+        $i="";
+        while ($p !== false) {
+            $i.= strtoupper($ch[0]);
+            $ch = substr($ch, $p + 1);
+            $p = strpos($ch, " ");
         }
+        if($ch!=""){
+            $i.= strtoupper($ch[0]);
+        }
+      
+
+     
 
         echo $i;
     }

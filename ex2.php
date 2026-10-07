@@ -25,7 +25,7 @@
         echo $p . " | ";
     }
     ?>
-
+    <br><br>
     <p>Ordre décroissant :</p>
     <?php
     $t1_dec = $tabpays1;
@@ -36,6 +36,7 @@
     ?>
 
     <h3>4. Tableau associatif tabpays2 :</h3>
+  
     <?php
     $tabpays2 = [
         "Tunis" => "Tunisie",
